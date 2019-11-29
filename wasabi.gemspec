@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["sinsoku"]
   spec.email         = ["sinsoku.listy@gmail.com"]
 
-  spec.summary       = 'This is an example for C extention.'
+  spec.summary       = 'This is an example for Rust extention.'
   spec.description   = spec.summary
   spec.homepage      = "https://github.com/sinsoku/wasabi.git"
   spec.license       = "MIT"
@@ -23,5 +23,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.extensions    = ["ext/wasabi/extconf.rb"]
+
+  spec.extensions << 'ext/Rakefile'
+  spec.add_runtime_dependency 'thermite'
 end

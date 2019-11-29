@@ -1,0 +1,2 @@
+require_relative 'build'
+task default: %w(thermite:build)
