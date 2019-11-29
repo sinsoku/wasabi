@@ -14,3 +14,12 @@ mkmf.log
 
 # rspec failure tracking
 .rspec_status
+
+
+#Added by cargo
+#
+#already existing elements are commented out
+
+/target
+**/*.rs.bk
+Cargo.lock
