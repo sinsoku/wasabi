@@ -1,7 +1,11 @@
 use ruby_sys::{class, fixnum, util};
 use ruby_sys::types::{Value, SignedValue, CallbackPtr};
-use ruru::util::str_to_cstring;
+use std::ffi::CString;
 use std::ptr;
+
+fn str_to_cstring(str: &str) -> CString {
+    CString::new(str).unwrap()
+}
 
 extern fn rb_sum(_mod: Value, a :Value, b: Value) -> Value {
     let a = unsafe { fixnum::rb_num2int(a) as i64 };

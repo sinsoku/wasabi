@@ -3,23 +3,10 @@
 version = 3
 
 [[package]]
-name = "lazy_static"
-version = "0.2.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "76f033c7ad61445c5b347c7382dd1237847eb1bce590fe50365dcb33d546be73"
-
-[[package]]
 name = "libc"
 version = "0.2.66"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d515b1f41455adea1313a4a2ac8a8a477634fbae63cc6100e3aebb207ce61558"
-
-[[package]]
-name = "ruby-sys"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7bbf176b904a3572f7292cb3dfb9a91bb4ec5ec586a29c7e2fbb4b73cc3a1c1e"
-replace = "ruby-sys 0.3.0 (git+https://github.com/steveklabnik/ruby-sys)"
 
 [[package]]
 name = "ruby-sys"
@@ -30,18 +17,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "ruru"
-version = "0.9.3"
-source = "git+https://github.com/d-unseductable/ruru#587f1c40b741c5e62bf9bf8736c0158f8cd5210e"
-dependencies = [
- "lazy_static",
- "ruby-sys 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
 name = "wasabi"
 version = "0.1.0"
 dependencies = [
- "ruby-sys 0.3.0 (git+https://github.com/steveklabnik/ruby-sys)",
- "ruru",
+ "ruby-sys",
 ]

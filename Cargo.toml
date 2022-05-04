@@ -8,7 +8,6 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-ruru = { git = "https://github.com/d-unseductable/ruru" }
 ruby-sys = { git = "https://github.com/steveklabnik/ruby-sys" }
 
 [replace]
