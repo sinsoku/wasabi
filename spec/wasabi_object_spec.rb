@@ -1,7 +1,5 @@
 RSpec.describe Wasabi::Object do
-  # TODO: support args
-  # let(:obj) { Wasabi::Object.new("foo") }
-  let(:obj) { Wasabi::Object.new }
+  let(:obj) { Wasabi::Object.new("foo") }
 
   describe "#name" do
     it "returns the initialization args" do
