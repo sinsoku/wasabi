@@ -43,9 +43,7 @@ extern fn rb_object_initialize(obj: Value, name: Value) {
 
 unsafe extern fn rb_name(obj: Value) -> Value {
     let name_id = util::rb_intern(str_to_cstring("name").as_ptr());
-    let ivar_name = class::rb_ivar_get(obj, name_id);
-    let name = value_to_string(ivar_name);
-    string::rb_utf8_str_new(str_to_cstring(&name).as_ptr(), name.len() as c_long)
+    class::rb_ivar_get(obj, name_id)
 }
 
 unsafe extern fn rb_say(obj: Value) -> Value {
