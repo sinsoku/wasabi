@@ -38,7 +38,6 @@ extern fn rb_object_initialize(obj: Value, name: Value) {
         let name_id = util::rb_intern(str_to_cstring("name").as_ptr());
         class::rb_ivar_set(obj, name_id, name);
     }
-    println!("rb_object_initialize: {}", value_to_string(name));
 }
 
 unsafe extern fn rb_name(obj: Value) -> Value {
