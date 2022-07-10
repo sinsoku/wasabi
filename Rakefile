@@ -5,8 +5,6 @@ RSpec::Core::RakeTask.new(:spec)
 
 require "rake/extensiontask"
 
-Rake::ExtensionTask.new("wasabi") do |ext|
-  ext.lib_dir = "lib/wasabi"
-end
+Rake::ExtensionTask.new("wasabi")
 
 task :default => [:clobber, :compile, :spec]
