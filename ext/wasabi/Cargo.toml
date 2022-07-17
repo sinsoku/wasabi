@@ -8,7 +8,6 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-ruby-sys = { git = "https://github.com/steveklabnik/ruby-sys" }
-
-[replace]
-"ruby-sys:0.3.0" = { git = "https://github.com/steveklabnik/ruby-sys" }
+rb-sys = "0.9"
+rb-allocator = "0.9"
+magnus = { version = "0.3", features = ["rb-sys-interop"] }
